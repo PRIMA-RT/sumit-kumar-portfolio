@@ -11,34 +11,23 @@ import { CodeWindow } from "./CodeWindow";
 const STATS = [
   {
     icon: FlashIcon,
-    value: "99.98%",
-    label: "UPTIME",
-    desc: "Reliable systems that never sleep.",
+    value: "37%",
+    label: "USER ATTRACTION",
+    desc: "Increase after launching AskAI on mobile.",
   },
   {
     icon: ChartColumnIcon,
-    value: "10M+",
-    label: "USERS IMPACTED",
-    desc: "Solutions used by millions worldwide.",
+    value: "74%",
+    label: "LESS VIZ EFFORT",
+    desc: "Lower implementation effort and LOC.",
   },
   {
     icon: SourceCodeIcon,
-    value: "50+",
-    label: "FEATURES DELIVERED",
-    desc: "End-to-end products shipped to scale.",
+    value: "18%",
+    label: "LESS NETWORK CODE",
+    desc: "Through a standardized GraphQL layer.",
   },
 ];
-
-function MicrosoftMark() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
-      <rect x="2" y="2" width="9" height="9" fill="currentColor" />
-      <rect x="13" y="2" width="9" height="9" fill="currentColor" />
-      <rect x="2" y="13" width="9" height="9" fill="currentColor" />
-      <rect x="13" y="13" width="9" height="9" fill="currentColor" />
-    </svg>
-  );
-}
 
 export function ImpactNew() {
   return (
@@ -47,18 +36,18 @@ export function ImpactNew() {
         {/* ── LEFT ── */}
         <Reveal>
           <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
-            Proven Impact
+            Measured Impact
           </p>
 
           <h2 className="mt-5 font-display font-black uppercase leading-[0.92] tracking-[-0.02em] text-[clamp(2.5rem,6vw,4.75rem)]">
-            <span className="block text-white">Building</span>
-            <span className="block text-white">Solutions</span>
-            <span className="block text-accent text-shimmer">That Scale.</span>
+            <span className="block text-white">Shipping</span>
+            <span className="block text-white">Mobile</span>
+            <span className="block text-accent text-shimmer">That Performs.</span>
           </h2>
 
           <p className="mt-7 max-w-md font-sans text-lg leading-relaxed text-zinc-400">
-            High-performance applications engineered for reliability,
-            scalability, and real business outcomes.
+            Native products, architecture, and engineering systems tied to
+            concrete gains in adoption, speed, reliability, and delivery.
           </p>
 
           {/* Stat cards */}
@@ -88,14 +77,11 @@ export function ImpactNew() {
 
           {/* Logos */}
           <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3 text-zinc-500">
-            <span className="flex items-center gap-2 font-sans text-sm font-semibold">
-              <MicrosoftMark />
-              Microsoft
-            </span>
+            <span className="font-sans text-sm font-semibold">New Relic</span>
             <span className="h-4 w-px bg-line-strong" />
-            <span className="font-sans text-sm font-semibold">GrapeCity</span>
+            <span className="font-sans text-sm font-semibold">Yulu Bikes</span>
             <span className="h-4 w-px bg-line-strong" />
-            <span className="font-sans text-sm font-semibold">UXMAGIC.AI</span>
+            <span className="font-sans text-sm font-semibold">RAAHO</span>
           </div>
         </Reveal>
 

@@ -24,8 +24,8 @@ export function StackNew() {
 
           <Reveal delay={80}>
             <p className="mt-8 max-w-xs font-mono text-[13px] uppercase leading-[1.7] tracking-[0.04em] text-zinc-500">
-              Standardized toolchain I work on for enterprise-grade product
-              development.
+              A native-first toolkit for performant mobile products, testable
+              architecture, AI workflows, and dependable releases.
             </p>
           </Reveal>
 

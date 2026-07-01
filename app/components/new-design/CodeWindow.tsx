@@ -1,93 +1,76 @@
 import React from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  ReactIcon,
+  SourceCodeIcon,
   ShieldEnergyIcon,
   DashboardSpeed02Icon,
   TradeUpIcon,
   ArrowRight01Icon,
 } from "@hugeicons/core-free-icons";
 
-/* ── Diff content ──────────────────────────────────────────────────────
-   A believable refactor (boolean flag → typed status enum). */
+/* Resume-inspired MVI refactor: scattered UI state to one state model. */
 type Status = "ctx" | "del" | "add";
 type Line = { num: number; status: Status; code: string };
 
 const OLD_LINES: Line[] = [
-  { num: 1, status: "ctx", code: "import React from 'react'" },
-  { num: 2, status: "ctx", code: "import { View, ActivityIndicator } from 'react-native'" },
-  { num: 3, status: "del", code: "import { useVehicleState } from '@hooks/useVehicleState'" },
-  { num: 4, status: "ctx", code: "import { Dashboard } from '@components/Dashboard'" },
+  { num: 1, status: "ctx", code: "class LogsViewModel : ViewModel() {" },
+  { num: 2, status: "del", code: "  val loading = MutableStateFlow(false)" },
+  { num: 3, status: "del", code: "  val logs = MutableStateFlow(emptyList<Log>())" },
+  { num: 4, status: "del", code: "  val error = MutableStateFlow<String?>(null)" },
   { num: 5, status: "ctx", code: "" },
-  { num: 6, status: "ctx", code: "export const HomeScreen = () => {" },
-  { num: 7, status: "del", code: "  const { vehicleState, isFullySynced } = useVehicleState()" },
+  { num: 6, status: "ctx", code: "  fun refresh() = viewModelScope.launch {" },
+  { num: 7, status: "del", code: "    loading.value = true" },
   { num: 8, status: "ctx", code: "" },
-  { num: 9, status: "del", code: "  if (!isFullySynced) {" },
-  { num: 10, status: "ctx", code: "    return <ActivityIndicator size=\"large\" />" },
+  { num: 9, status: "del", code: "    logs.value = repository.streamLogs()" },
+  { num: 10, status: "del", code: "    loading.value = false" },
   { num: 11, status: "ctx", code: "  }" },
   { num: 12, status: "ctx", code: "" },
-  { num: 13, status: "ctx", code: "  return (" },
-  { num: 14, status: "ctx", code: "    <View>" },
-  { num: 15, status: "del", code: "      <Dashboard state={vehicleState} />" },
-  { num: 16, status: "ctx", code: "    </View>" },
-  { num: 17, status: "ctx", code: "  )" },
-  { num: 18, status: "ctx", code: "}" },
+  { num: 13, status: "ctx", code: "}" },
 ];
 
 const NEW_LINES: Line[] = [
-  { num: 1, status: "ctx", code: "import React from 'react'" },
-  { num: 2, status: "ctx", code: "import { View, ActivityIndicator } from 'react-native'" },
-  { num: 3, status: "add", code: "import { useVehicleState, SyncStatus } from '@hooks/useVehicleState'" },
-  { num: 4, status: "ctx", code: "import { Dashboard } from '@components/Dashboard'" },
+  { num: 1, status: "ctx", code: "class LogsViewModel : ViewModel() {" },
+  { num: 2, status: "add", code: "  private val _state = MutableStateFlow(LogsState())" },
+  { num: 3, status: "add", code: "  val state = _state.asStateFlow()" },
+  { num: 4, status: "ctx", code: "" },
   { num: 5, status: "ctx", code: "" },
-  { num: 6, status: "ctx", code: "export const HomeScreen = () => {" },
-  { num: 7, status: "add", code: "  const { vehicleState, syncStatus } = useVehicleState()" },
+  { num: 6, status: "ctx", code: "  fun onIntent(intent: LogsIntent) = reduce(intent) {" },
+  { num: 7, status: "add", code: "    copy(isLoading = true)" },
   { num: 8, status: "ctx", code: "" },
-  { num: 9, status: "add", code: "  if (syncStatus === SyncStatus.PENDING) {" },
-  { num: 10, status: "ctx", code: "    return <ActivityIndicator size=\"large\" />" },
-  { num: 11, status: "ctx", code: "  }" },
+  { num: 9, status: "add", code: "    copy(logs = repository.streamLogs(), isLoading = false)" },
+  { num: 10, status: "ctx", code: "  }" },
+  { num: 11, status: "ctx", code: "" },
   { num: 12, status: "ctx", code: "" },
-  { num: 13, status: "ctx", code: "  return (" },
-  { num: 14, status: "ctx", code: "    <View>" },
-  { num: 15, status: "add", code: "      <Dashboard state={vehicleState} syncStatus={syncStatus} />" },
-  { num: 16, status: "ctx", code: "    </View>" },
-  { num: 17, status: "ctx", code: "  )" },
-  { num: 18, status: "ctx", code: "}" },
+  { num: 13, status: "ctx", code: "}" },
 ];
 
 const FEATURES = [
   {
     icon: ShieldEnergyIcon,
     color: "text-accent",
-    title: "More Reliable",
-    desc: "Better state management and sync handling",
+    title: "Predictable State",
+    desc: "Unidirectional MVI data flow",
   },
   {
     icon: DashboardSpeed02Icon,
     color: "text-accent",
-    title: "Faster Performance",
-    desc: "Optimized re-renders and reduced latency",
+    title: "Testable Events",
+    desc: "Intent-driven behavior and assertions",
   },
   {
     icon: TradeUpIcon,
     color: "text-accent",
-    title: "Business Impact",
-    desc: "Improved UX and higher user satisfaction",
+    title: "Reusable Architecture",
+    desc: "Less repeated feature boilerplate",
   },
 ];
 
 /* ── Minimal tokenizer ─────────────────────────────────────────────────── */
 const KEYWORDS = new Set([
-  "import",
-  "from",
-  "export",
-  "const",
-  "return",
-  "if",
-  "let",
-  "new",
-  "await",
-  "async",
+  "class",
+  "private",
+  "val",
+  "fun",
 ]);
 const TOKEN_RE =
   /('[^']*'|"[^"]*")|([A-Za-z_$][A-Za-z0-9_$]*)|(\s+)|([^\sA-Za-z0-9_$])/g;
@@ -188,12 +171,12 @@ export function CodeWindow({ className = "" }: { className?: string }) {
         <div className="flex items-center justify-between border-b border-white/[0.07] px-5 py-4 sm:px-6">
           <div className="flex min-w-0 items-center gap-2.5">
             <HugeiconsIcon
-              icon={ReactIcon}
-              className="h-5 w-5 shrink-0 text-[#61dafb]"
+              icon={SourceCodeIcon}
+              className="h-5 w-5 shrink-0 text-accent"
               strokeWidth={1.6}
             />
             <span className="truncate font-sans text-sm font-semibold text-white">
-              HomeScreen.tsx
+              LogsViewModel.kt
             </span>
           </div>
           <span className="flex shrink-0 items-center gap-2 rounded-full border border-accent/40 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-accent">

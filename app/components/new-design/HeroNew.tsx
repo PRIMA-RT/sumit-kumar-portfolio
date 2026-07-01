@@ -53,9 +53,9 @@ export function HeroNew() {
         as="h1"
         className="reveal-slow font-display font-black  uppercase leading-[0.86] tracking-[-0.03em] text-[clamp(2.75rem,12.5vw,12rem)]"
       >
-        <span className=" text-accent text-shimmer italic inline pr-[0.12em] -mr-[0.12em]">SURBHI</span>{" "}
+        <span className=" text-accent text-shimmer italic inline pr-[0.12em] -mr-[0.12em]">SUMIT</span>{" "}
         <span className=" text-white inline">
-          SINHA
+          KUMAR
           <span className="text-accent text-shimmer">.</span>
         </span>
       </Reveal>
@@ -68,18 +68,18 @@ export function HeroNew() {
           className="reveal-slow flex flex-col border border-line p-7 sm:p-9"
         >
           <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-accent text-shimmer">
-            CORE_COMPETENCY
+            PROFILE_SUMMARY
           </p>
           <p className="mt-6 max-w-sm font-mono text-[13px] uppercase leading-[1.9] tracking-[0.04em] text-zinc-300">
-            Full-stack engineer building scalable systems and intelligent
-            products. Experienced in distributed systems, AI-driven automation,
-            and high-performance web applications.
+            Mobile engineer building Android and iOS native products with
+            Kotlin, Swift, modern declarative UI, scalable architecture, and
+            production-ready agentic AI experiences.
           </p>
           <a
             href="#projects"
             className="group mt-8 inline-flex items-center justify-center gap-2 bg-white px-6 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-black transition-colors hover:bg-accent hover:text-white"
           >
-            EXPLORE MY WORK
+            VIEW SELECTED WORK
             <ArrowRightIcon className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1 group-hover:text-white" />
           </a>
         </Reveal>

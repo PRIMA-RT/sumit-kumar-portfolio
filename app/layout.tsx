@@ -18,14 +18,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Surbhi Sinha — Full-Stack Engineer",
+  title: "Sumit Kumar - Mobile Engineer",
   description:
-    "Surbhi Sinha — Full-stack engineer building scalable systems and intelligent products. Distributed systems, AI-driven automation, and high-performance web applications.",
+    "Portfolio of Sumit Kumar, a mobile engineer specializing in Android, iOS, Kotlin, Swift, native UI, scalable architecture, and AI integration.",
   icons: { icon: "/favicon.ico" },
   openGraph: {
-    title: "Surbhi Sinha — Full-Stack Engineer",
+    title: "Sumit Kumar - Mobile Engineer",
     description:
-      "Full-stack engineer building scalable systems and intelligent products.",
+      "Android and iOS native engineering, AI integration, mobile architecture, and high-performance product delivery.",
   },
 };
 
