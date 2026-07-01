@@ -1,175 +1,106 @@
-/* Single source of content for the portfolio. Keeps section components lean. */
+/* Resume-backed content for Sumit Kumar's portfolio. */
 
 export const NAV_LINKS = [
   { label: "HOME", href: "#home" },
   { label: "PROJECTS", href: "#projects" },
-  { label: "JOURNEY", href: "#journey" },
+  { label: "EXPERIENCE", href: "#journey" },
   { label: "CONTACT", href: "#contact" },
 ];
 
 export const SOCIALS = [
-  { label: "GITHUB", href: "https://github.com/Surbhi-sinha" },
-  { label: "LINKEDIN", href: "https://www.linkedin.com/in/surbhi-sinha-in/" },
-  { label: "MEDIUM", href: "https://astsurbhisinha.medium.com/" },
-  { label: "WEBSITE", href: "https://surbhi-sinha.vercel.app/" },
+  { label: "GITHUB", href: "https://github.com/prima-rt" },
+  { label: "LINKEDIN", href: "https://www.linkedin.com/in/stkrr002/" },
+  { label: "MEDIUM", href: "https://medium.com/@AndroidRayz" },
+  { label: "LEETCODE", href: "https://leetcode.com/SR-/" },
 ];
 
 export const HERO_STATS = [
   {
     icon: "cpu" as const,
-    label: "ARTIFICIAL INTELLIGENCE",
-    lines: ["AI AGENTS" , "CLAUDE SKILLS", "MODEL CONTEXT PROTOCOL(MCP)", "AGENTIC AI"],
+    label: "MOBILE PLATFORMS",
+    lines: ["ANDROID NATIVE", "IOS NATIVE", "KOTLIN MULTIPLATFORM", "COMPOSE MULTIPLATFORM"],
   },
   {
     icon: "code" as const,
-    label: "LANGUAGE BASE",
-    lines: ["HTML / CSS", "JS / TS / NODE.JS", "GO / RUST", "JAVA / SPRING BOOT", "NEXT.JS / NEST.JS"],
+    label: "LANGUAGES & UI",
+    lines: ["KOTLIN / JAVA", "SWIFT / SWIFTUI", "JETPACK COMPOSE", "SWIFT CONCURRENCY"],
   },
   {
     icon: "cloud" as const,
-    label: "DEVOPS",
-    lines: ["AWS / K8S / AZURE", "DOCKER","GCP", "KUBERNETES", "RENDER", "VERCEL"],
+    label: "AI & DELIVERY",
+    lines: ["AI AGENTS / SKILLS", "MCP / SUBAGENTS", "FASTLANE / CI/CD", "GITHUB ACTIONS"],
   },
   {
     icon: "box" as const,
     label: "ARCHITECTURE",
-    lines: ["MICROSERVICES ", "MONOLITHIC","EVENT-DRIVEN ARCHITECHTURE", "LAYERED(N-TIER) ARCHITECHTURE" , "CLEAN ARCHITECHTURE", "DISTRIBUTED SYSTEMS"],
+    lines: ["MVI / MVVM", "CLEAN ARCHITECTURE", "MULTI-MODULE", "TDD / GRAPHQL"],
   },
 ];
 
 export const SERVICES = [
   {
     index: "01",
-    tag: "INFRASTRUCTURE",
+    tag: "MOBILE",
     icon: "layers" as const,
-    title: "FULL-STACK PRODUCT DEVELOPMENT",
-    description:
-      "End-to-end engineering from MVP to enterprise scale. I focus on performance, security, and exceptional user experience.",
-    points: [
-      "CUSTOM WEB APPLICATIONS",
-      "RESTful APIs",
-      "SAAS PLATFORMS",
-      "HIGH-FIDELITY DASHBOARDS",
-    ],
+    title: "ANDROID & IOS ENGINEERING",
+    description: "Building native mobile experiences with Kotlin, Jetpack Compose, Swift, and SwiftUI across complex product workflows.",
+    points: ["ANDROID & IOS NATIVE", "JETPACK COMPOSE & SWIFTUI", "KOTLIN MULTIPLATFORM", "ACCESSIBLE, RESPONSIVE UX"],
   },
   {
     index: "02",
     tag: "INTELLIGENCE",
     icon: "cpu" as const,
-    title: "AI INTEGRATION & AUTOMATION",
-    description:
-      "Infuse your products with intelligence. Implementing LLMs and custom AI agents to automate workflows and drive insights.",
-    points: [
-      "AI AGENT WORKFLOWS",
-      "LLM WORKFLOWS",
-      "RAG & VECTOR SEARCH",
-      "SKILLS AND MCP IMPLEMENTATIONS",
-    ],
+    title: "AI-ENABLED MOBILE PRODUCTS",
+    description: "Bringing agentic AI, streaming experiences, codebase-aware subagents, skills, and MCP workflows into production mobile applications.",
+    points: ["AGENTIC AI EXPERIENCES", "STREAMING INTERFACES", "AI SUBAGENTS & SKILLS", "MCP INTEGRATION"],
   },
   {
     index: "03",
-    tag: "ARCHITECTURE",
+    tag: "QUALITY",
     icon: "cloud" as const,
-    title: "SCALABLE CLOUD ARCHITECTURE",
-    description:
-      "Robust backend systems designed for growth. Optimizing for high traffic, low latency, and continuous delivery.",
-    points: [
-      "SERVERLESS & MICROSERVICES ARCHITECTURE",
-      "AWS / GCP / Azure",
-      "CI / CD & DevOps",
-      "Performance & Scalability",
-    ],
+    title: "ARCHITECTURE & DELIVERY",
+    description: "Creating predictable state, testable modules, reusable SDKs, and automated release workflows for dependable mobile teams.",
+    points: ["MVI / MVVM / CLEAN", "TDD & EVENT-BASED TESTING", "FASTLANE & CI/CD", "GRAPHQL & REST DATA LAYERS"],
   },
 ];
 
 export const SHOWCASE_PILLARS = [
-  { index: "01", title: "CLOUD ARCHITECTURE" },
-  { index: "02", title: "AI INTEGRATION" },
-  { index: "03", title: "FULL-STACK CORE" },
+  { index: "01", title: "NATIVE MOBILE" },
+  { index: "02", title: "AGENTIC AI" },
+  { index: "03", title: "PRODUCT IMPACT" },
 ];
 
 export const STACK_GROUPS = [
-  {
-    title: "BACKEND & RUNTIME",
-    items: [
-      "Node.js / Express.js / Nest.js",
-      "Typescript / JavaScript",
-      "JAVA / Spring Boot",
-      "GO / GOLANG",
-      "C# / Python",
-    ],
-  },
-  {
-    title: "INFRASTRUCTURE & OPS",
-    items: [
-      "AWS (EKS, S3, RDS, CloudFront)",
-      "Docker / Containerization",
-      "Terraform / IaC",
-      "Git / GitHub Actions (CI/CD)",
-      "Nginx / Load Balancing",
-    ],
-  },
-  {
-    title: "DATA & STORAGE",
-    items: [
-      "PostgreSQL / MySQL",
-      "MongoDB",
-      "Redis (Caching / Queues)",
-      "ElasticSearch",
-      "S3 / Cloud Storage",
-    ],
-  },
-  {
-    title: "FRONTEND & CLIENT",
-    items: [
-      "Next.js / React.js",
-      "TypeScript",
-      "Tailwind CSS / Styled Components",
-      "Redux / Zustand / React Query",
-      "Web Sockets / Socket.IO",
-    ],
-  },
+  { title: "ANDROID", items: ["Kotlin / Java", "Jetpack Compose", "Android Core", "Dagger-Hilt / RoomDB", "Android Studio"] },
+  { title: "IOS & MULTIPLATFORM", items: ["Swift / SwiftUI", "Swift Concurrency", "Actors", "Kotlin Multiplatform", "Compose Multiplatform"] },
+  { title: "ARCHITECTURE & DATA", items: ["MVI / MVVM", "Clean Architecture", "Multi-Module", "GraphQL / REST APIs", "Firebase / Sockets"] },
+  { title: "TESTING & DELIVERY", items: ["JUnit / Espresso", "Mockito / MockK", "Turbine / Compose Node", "Fastlane / GitHub Actions", "Git / Postman / Linux"] },
 ];
 
 export const STACK_PRINCIPLES = [
-  {
-    icon: "zap" as const,
-    title: "MODERN & SCALABLE",
-    description: "BUILD FOR PERFORMANCE AND GROWTH",
-  },
-  {
-    icon: "shield" as const,
-    title: "SECURE BY DESIGN",
-    description: "FOLLOWING BEST PRACTICES FOR SECURITY AND RELIABILITY",
-  },
-  {
-    icon: "code" as const,
-    title: "DEVELOPER EXPERIENCE",
-    description: "PRODUCTION WORKFLOWS AND CLEAN DEVELOPMENT ENVIRONMENTS",
-  },
+  { icon: "zap" as const, title: "PERFORMANCE FIRST", description: "NATIVE-WEB BRIDGES, BATCHING, COROUTINES, AND RESPONSIVE UI" },
+  { icon: "shield" as const, title: "TESTED BY DESIGN", description: "TDD, EVENT-BASED TESTING, UI TESTS, AND SAFE DATA FLOWS" },
+  { icon: "code" as const, title: "REUSABLE SYSTEMS", description: "MULTI-MODULE ARCHITECTURE, SDKs, TEMPLATES, AND SHARED COMPONENTS" },
 ];
 
 export const CAPABILITIES = [
   {
-    index: "01_CORE_ENGINEERING",
-    title: "DISTRIBUTED SYSTEMS",
-    description:
-      "Building fault-tolerant backends that scale horizontally. Focused on high throughput and data integrity across multi-region clusters.",
-    tags: ["GO", "KAFKA", "KUBERNETES"],
+    index: "01_NATIVE_ENGINEERING",
+    title: "CROSS-PLATFORM MOBILE",
+    description: "Leading Android and iOS native feature development while sharing architecture and product thinking across both ecosystems.",
+    tags: ["KOTLIN", "SWIFT", "KMP"],
   },
   {
-    index: "02_INTELLIGENCE_LAYER",
-    title: "APPLIED AI AGENTS",
-    description:
-      "Integrating large language models into production workflows. Developing autonomous agents for complex task orchestration and data analysis.",
-    tags: ["PYTORCH", "OPENAI_API", "VECTOR_DB"],
+    index: "02_AI_SYSTEMS",
+    title: "AGENTIC MOBILE AI",
+    description: "Building streaming AI experiences and codebase-aware systems with generated indexes, multiple subagents, reusable skills, and MCP.",
+    tags: ["AI AGENTS", "MCP", "STREAMING"],
   },
   {
-    index: "03_INTERFACE_LAB",
-    title: "ADVANCED FRONTENDS",
-    description:
-      "Crafting high-fidelity, high-performance web experiences. Specializing in data visualization and complex dashboard architecture.",
-    tags: ["NEXT.JS", "TYPESCRIPT", "THREE.JS"],
+    index: "03_ENGINEERING_SYSTEMS",
+    title: "SCALABLE ARCHITECTURE",
+    description: "Designing clean, multi-module mobile systems with predictable state, standardized data layers, automated delivery, and strong tests.",
+    tags: ["MVI", "GRAPHQL", "CI/CD"],
   },
 ];
 
@@ -179,187 +110,109 @@ export type Project = {
   title: string;
   description: string;
   cta?: { label: string; href: string };
-  points:string[],
+  points: string[];
   image: string;
-  /** how the media relates to the card body */
   layout: "media-top" | "media-side" | "media-bg" | "text";
-  /** body surface */
   theme: "light" | "dark";
-  /** CTA presentation */
   ctaStyle: "arrow" | "accent" | "bar" | "box" | "none";
 };
 
 export const PROJECTS: Project[] = [
   {
     index: "01",
-    meta: "2024 / REACT & THREE.JS",
-    title: "THE CARSTUDIO",
-    description:
-      "A high-performance 3D car customization platform using .glb files and a rich interactive UI. Optimized for advanced WebGL rendering and rapid material loading.",
-    cta: { label: "EXPLORE PLATFORM", href: "https://the-car-studio.vercel.app/configurator" },
-    image: "/carStudio.gif",
-    points:[],
-    layout: "media-top",
+    meta: "KOTLIN / COMPOSE / GEMINI",
+    title: "MEDICOZ AI",
+    description: "An AI-powered white-label mobile solution for small and medium clinics, connecting healthcare professionals and patients.",
+    cta: { label: "VIEW ON GITHUB", href: "https://github.com/prima-rt/Medicoz" },
+    image: "",
+    points: ["Real-time video consultation with Jitsi Meet", "Gemini-powered healthcare chat and medicine recognition", "Public community and private messaging", "Multi-module Clean Architecture with Hilt, Room, sockets, Firebase, and CI/CD"],
+    layout: "text",
     theme: "dark",
     ctaStyle: "arrow",
   },
   {
     index: "02",
-    meta: "AI / MONGODB",
-    title: "NEURANOTES",
-    description:
-      "A full-stack Notes Application built using React (Frontend) and Node.js with MongoDB (Backend). The app features an interactive canvas for managing notes, supports CRUD operations, and integrates AI enhancements using OpenRouter.",
-    cta: { label: "LAUNCH APP", href: "https://neura-notes-ashen.vercel.app/" },
-    image: "/NeuraNotesDemo.gif",
-    points:[
-      "Interactive Canvas: Drag and position notes freely.",
-      "Create, Read, Update, Delete (CRUD) Notes.",
-      "AI Integration: Improve grammar, summarize, or expand notes.",
-      "Persistent Storage: Notes are stored in MongoDB.",
-      "Context API for State Management.",
-      "Responsive & User-Friendly UI.]"],
-    layout: "media-top",
+    meta: "SWIFTUI / JSON / GRAPH EXPLORER",
+    title: "JSON VISUALIZER PRO",
+    description: "A native SwiftUI application for parsing, visualizing, searching, and inspecting complex JSON payloads at multiple levels.",
+    cta: { label: "VIEW ON GITHUB", href: "https://github.com/PRIMA-RT/Json-Visualizer-Pro" },
+    image: "",
+    points: ["Explorer, Nodes, History, and Settings workflows", "Presentation, Domain, and Data architecture", "Pan, zoom, fullscreen, branch expansion, and search navigation", "File import, formatting, schema generation, statistics, and history"],
+    layout: "text",
     theme: "dark",
     ctaStyle: "arrow",
-  },  
+  },
   {
     index: "03",
-    meta: "DASHBOARD / CHAT APPLICATION",
-    title: "MEDICOZ",
-    description:
-      "Developed a healthcare communication platform featuring user and doctor registration, secure authentication, profile management, and real-time chat functionality, enabling seamless interaction between patients and healthcare professionals. Medico is a healthcare communication platform that connects patients and doctors through a streamlined digital experience. The platform currently supports user and doctor onboarding, authentication, profile management, and real-time messaging, allowing healthcare professionals and patients to communicate efficiently. Its modular architecture enables future expansion into appointment scheduling, telemedicine, electronic health records, and comprehensive hospital management services.",
-    cta: { label: "LAUNCH APP", href: "https://medicoz-web.vercel.app/" },
-    image: "/Medicoz.png",
-    points:[],
-    layout: "media-top",
-    theme: "dark",
-    ctaStyle: "arrow",
-  },
-
-  {
-    index: "04",
-    meta: "FIREBASE / BOOTSTRAP",
-    title: "TASK BUDDY",
-    description:
-      "TaskBuddy is a comprehensive task management application designed to help you organize your personal and professional life with ease. Whether you're managing daily to-dos, tracking project milestones, or collaborating with a team, TaskBuddy provides the tools you need to stay productive and focused. With its intuitive interface and powerful features, TaskBuddy transforms the way you manage tasks, helping you prioritize effectively and never miss a deadline again.",
-    cta: { label: "OPEN TASK BUDDY", href: "https://taskbuddy-psi.vercel.app/" },
-    image: "/Taskbuddy-copy.png",
-    points:[
-      "Sign Up/Login: Authenticate your Google Account.",
-"Create Your First Task: Click the 'ADD TASK' button to add a new task",
-"Organize: Categorize your tasks, set due dates, and attach relevant files",
-"Track Progress: Move tasks across different status columns as you make progress",
-"Stay Updated: Monitor task history and activity logs to maintain accountability"
-    ],
-    layout: "media-side",
+    meta: "ANDROID / ZXING / OFFLINE",
+    title: "SCANALPHA",
+    description: "A lightweight Android application for scanning and generating QR codes and barcodes with a focused, responsive interface.",
+    cta: { label: "VIEW ON PLAY STORE", href: "https://play.google.com/store/apps/details?id=com.alpharays.scanalpha" },
+    image: "",
+    points: ["Real-time QR and barcode scanning with ZXing", "Custom QR code generation", "Offline image saving", "Simple navigation and responsive feedback"],
+    layout: "text",
     theme: "dark",
     ctaStyle: "accent",
-  },
-  {
-    index: "05",
-    meta: "TYPESCRIPT / LOGIC",
-    title: "SECRET SANTA",
-    description:
-      "Architected a complex gift exchange system with custom logic rules, handling historical constraints and participant matching with high reliability.",
-    cta: { label: "EXPLORE SECRET SANTA", href: "https://secret-santa-frontend-self.vercel.app/" },
-    image: "/secretsanta.gif",
-    points:[],
-    layout: "media-bg",
-    theme: "dark",
-    ctaStyle: "accent",
-  },
-  {
-    index: "06",
-    meta: "REDIS / DOCKER",
-    title: "MULTILINGUAL FAQ",
-    description:
-      "Scalable FAQ system with dynamic language support. Leverages Redis for caching and Google Translate API for automated localization.",
-    image: "/multilingual.png",
-    points:[],
-    cta: { label: "VIEW SYSTEM", href: "https://github.com/Surbhi-sinha/Multilingual_FAQ_system_UI" },
-    layout: "media-top",
-    theme: "dark",
-    ctaStyle: "bar",
-  },
-  {
-    index: "07",
-    meta: "C# / .NET CORE",
-    title: "DESKTOP CALCULATOR",
-    description:
-      "Advanced Windows utility with support for keyboard shortcuts and dynamic theming, built using modern .NET architectures.",
-    cta: { label: "SOURCE CODE", href: "https://github.com/Surbhi-sinha" },
-    image: "/calc.gif",
-    points:[],
-    layout: "media-bg",
-    theme: "dark",
-    ctaStyle: "box",
   },
 ];
 
 export const JOURNEY = [
   {
-    period: "MAY 2025 — PRESENT",
-    location: "Bangalore, INDIA",
-    role: "FULLSTACK DEVELOPER",
-    company: "UXMagic.ai",
-    detail: "Product - UXMagic.ai , SeoSorted.ai",
-    point:[
-"Building AI based solutions for the designers.",
-"Designed and built scalable, content-driven frontend architectures (Inspirations, community, and discovery pages) supporting 10+ product workflows",
-"Deloped reusable UI component libraries using React, improving development speed and consistency across features",
-"Built and integrated backend APIs to enable dynamic editing within design workflows, enhancing product flexibility and usability",
-"Implemented LLM-powered workflows aligned with user-defined guidelines, driving ~35% increase in feature adoption",
-"Optimized performance through lazy loading, incremental rendering, and efficient asset management, improving page load speed by 20–30%",
-"Identified and fixed critical issues in React export flows, reducing user errors by ~25% in a key product workflow",
-"Improved SEO and discoverability by resolving robots.txt and sitemap issues, achieving near-complete crawl coverage",
-"Contributed to a frontend monolithic architecture, optimizing component reuse and maintaining performance while scaling features",
-"Collaborated closely with design, product, and engineering teams to deliver user-focused features in a fast-paced environment"
+    period: "MARCH 2026 - PRESENT",
+    location: "BENGALURU, INDIA",
+    role: "SDE-2, MOBILE - ANDROID & IOS",
+    company: "NEW RELIC",
+    detail: "AskAI, dashboards, real-time logs, and mobile engineering systems",
+    point: [
+      "Led AskAI across Android and iOS from scratch, adding agentic AI, complex UX, and streaming support that increased user attraction by 37%.",
+      "Reduced dashboard visualization effort and LOC by 74% while improving visualization-screen speed by 16%.",
+      "Led a real-time Logs vertical that increased client traction by 16%.",
+      "Built a codebase-aware AI system with generated indexes, subagents, and reusable skills for mobile engineering.",
+      "Automated builds, tests, and AI-powered PR reviews with Fastlane, and standardized GraphQL code to reduce LOC by 18%.",
     ],
     current: true,
   },
   {
-    period: "JAN 2024 — MAY 2025",
-    location: "Noida, INDIA",
-    role: "SOFTWARE ENGINEER",
-    company: "Grapecity India",
-    detail: "Product - SpreadJS",
-    point:[
-      "Developed tailored software component extensions to enhance efficiency.",
-"Improved user experiences for end customers through advanced solutions.",
-"Designed scalable enterprise-grade JavaScript solutions for Excel functionality.",
-"Optimized performance of SpreadJS in complex web environments.",
-"Worked with technologies: JavaScript, TypeScript, ReactJS, AngularJS, NodeJS, C#.",
-"Used tools like GitLab and Visual Studio for seamless workflows."
+    period: "JANUARY 2025 - FEBRUARY 2026",
+    location: "BENGALURU, INDIA",
+    role: "SDE, ANDROID",
+    company: "YULU BIKES",
+    detail: "Modern Android product architecture and hardware-integrated mobility experiences",
+    point: [
+      "Modernized the app with Jetpack Compose and created an MVI-based unidirectional architecture.",
+      "Built Google Maps location and tracking workflows plus BLE, scanner, service, and broadcast-receiver integrations.",
+      "Reduced repetitive MVI implementation work by 27% through custom file templates.",
+      "Applied TDD and event-based testing with Espresso, Compose Node, Mockito, and Hilt.",
     ],
     current: false,
   },
   {
-    period: "APR 2023 — JUN 2023",
-    location: "Hyderabad, INDIA",
-    role: "SOFTWARE DEVELOPER INTERN",
-    company: "Microsoft",
-    detail: "Product - Azure Devops (core) Test Plans Team",
-    point:[
-      "Enhanced Azure DevOps Test Plans' import/export functionality, reducing file size by up to 500 KB.  ",
-"Developed unit tests and optimized features using npm packages.  ",
-"Collaborated with global teams to implement micro-frontends and workflows.  ",
-"Followed Agile methodologies for feature development and delivery.  ",
-"Gained expertise in C#, SQL Management Studio, MySQL, and telemetry tools."
+    period: "FEBRUARY 2023 - DECEMBER 2024",
+    location: "GURUGRAM, INDIA",
+    role: "SDE, ANDROID",
+    company: "RAAHO",
+    detail: "Quick digital solutions for logistics",
+    point: [
+      "Migrated legacy threaded code to coroutines for better responsiveness and maintainability.",
+      "Published reusable UI and Kotlin SDKs through JFrog to accelerate development across projects.",
+      "Created a reusable network layer that reduced LOC by 23% and helped reduce crashes and ANRs by 3%.",
+      "Designed MVVM and Clean Architecture API flows and wrote tests for more than 20 distinct features.",
     ],
     current: false,
   },
   {
-    period: "2020 — 2024",
-    location: "New Delhi, INDIA",
-    role: "B.TECH IN COMPUTER SCIENCE",
-    company: "Guru Govind Singh Indraprastha University",
-    detail: "Computer Science Engineering",
-    point:[
-      "CGPA : 9.2",
-      "Data Structures, Computer Networks &  Database Management System"
+    period: "2020 - 2024",
+    location: "NEW DELHI, INDIA",
+    role: "B.TECH, COMPUTER SCIENCE ENGINEERING",
+    company: "GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY",
+    detail: "Graduated with a 9.0 CGPA",
+    point: [
+      "Studied data structures and algorithms, OOP, DBMS, operating systems, and computer networks.",
+      "Solved 300+ DSA problems and ranked under 3,000 in the Google Kick Start final round.",
+      "Earned Anthropic certifications in MCP, AI Skills, and Subagents, plus Swift Concurrency and SwiftUI credentials.",
     ],
     current: false,
   },
 ];
 
-export const CONTACT_EMAIL = "astsurbhisinha@gmail.com";
+export const CONTACT_EMAIL = "sumitkrr2002@gmail.com";
